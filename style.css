@@ -1,0 +1,123 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+/*  margin: 2em; */
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: yellow;
+}
+
+h1 {
+  font-family:'Do Hyeon', sans-serif;
+  font-size: 66px;
+  color: black;
+  
+}
+
+p {
+  
+}
+table {
+  background-color: white;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  padding: 7px;
+  
+  
+  
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#activate {
+  font-size: 25px;
+  padding-left: 40%;
+}
+
+#HSTitle {
+  margin: 20px;
+  background-color: white;
+}
+
+#playerscores {
+  
+  margin: 20px ; 
+  
+  
+}
+
+
+.centeredtext{
+  text-align: center;
+}
+.center {
+  margin: auto;
+  width: 70vmin;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.important {
+  color: red;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+
+
+
+#highscoretable {
+  
+  
+}
+
+
+#help div span{
+  
+  
+}
+
+
+#container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  border: 0;
+  margin: 0;
+  width: 80vw;
+  height: 80vh;
+  background-color: lightblue;
+}
+
+#text-area {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;   
+}
+
+#speakBtn, #listenBtn {
+ 
+  display: inline-block;
+}
+
+

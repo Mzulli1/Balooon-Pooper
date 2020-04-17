@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  
+  <head>
+    <title> Mark's Project </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel= "stylesheet" href="/CoolButtons.css"/>
+    <link rel="stylesheet" href= "http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet"> 
+  
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="/voice-commands.js" defer></script>
+
+    <script src="/script.js" defer></script>
+    <script src ="/game.js" defer></script>
+    
+    
+  </head>
+  
+  
+  <body>
+    <div id= "titleT" class="center">
+    <h1 class="centeredtext">
+      Ballooon Popper
+    </h1>
+    </div>
+    
+    <div id="container">
+      <div class="button" onclick= "(start)">
+      <a id= "start" href="#">Start</a>
+      <p class="top">Please Enable Mic</p>
+      <p class="bottom">Click to Begin</p>
+    </div>
+
+      
+      <span> 
+      <div id= "Spinner">
+        <p1>
+          <input id="spinner" name= "value" type= "number" placeholder= "1 Player" max= "5" min = "0">
+        </p1>
+        </div>
+      </span>
+      
+    </div>
+    <div id= "highscoretable" class= "center">
+      
+      <table id = "playerscores" class= "center">
+        
+        <tr>
+          <th>
+            High Scores
+          </th>
+        </tr>
+        
+        <tr id="pos-first">
+
+          <td>
+            JakeTheRake
+          </td>
+          <td>
+            3400
+          </td>
+        </tr>  
+        <tr id="pos-second">
+          <td>
+            EyBeter99
+          </td>
+          <td>
+            3400
+          </td>
+        </tr>
+        <tr id="pos-third">
+          <td>
+            AliceOfWonder
+          </td>
+          <td>
+            3400
+          </td>
+        </tr>  
+        <tr id= "pos-fourth">
+          <td>
+            DapperDaniel
+          </td>
+          <td>
+            3400
+          </td>
+        </tr>
+      </table>
+      
+    </div>
+
+    <div id="no-browser" class="hidden">
+      <h1>
+        Sorry your browser does not support the Speech-to-Text WebAPI. A good
+        browser to use is Google Chrome or Mozilla Firefox.
+      </h1>
+    </div>
+  </body>
+</html>

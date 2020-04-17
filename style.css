@@ -24,6 +24,8 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   padding: 7px;
+
+
   
   
   
@@ -81,8 +83,9 @@ tr:nth-child(even) {
 
 
 #highscoretable {
-  
-  
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 30px;
 }
 
 

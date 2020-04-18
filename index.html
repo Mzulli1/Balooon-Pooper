@@ -3,6 +3,7 @@
   
   
   <head>
+
     <title> Mark's Project </title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -30,35 +31,38 @@
     
   </head>
   
-   <canvas id="myCanvas"></canvas>
+   
   
   <body>
-    <div id= "startpage">
 
-      <div id= "titleT" class="center">
-      <h1 class="centeredtext">
+    <div id=titleText>
+      
+      <h1 id="pageTitle">
         Ballooon Popper
       </h1>
-      </div>
-    
-      <div id="container">
-        <div class="button" onclick= "(start)">
-        <a id= "start" href="#">Start</a>
-        <p class="top">Please Enable Mic</p>
-        <p class="bottom">Click to Begin</p>
-      </div>
+    <
+     
 
-        
-        <span> 
-        <div>
-          <p1>
-            <input id="spinner" name= "value" type= "number" placeholder= "1 Player" max= "5" min = "0">
-          </p1>
-          </div>
-        </span>
-        
-      </div>
-      <div  class= "center">
+      <canvas id="myCanvas"></canvas>
+
+      <div id= "startpage">
+
+      <div class="container">
+        <div class="button" onclick= "(start)">
+          <a id= "start" href="#">Start</a>
+          <p class="top">Please Enable Mic</p>
+          <p class="bottom">Click to Begin</p>
+        </div>
+          <span> 
+            <div>
+              <p1>
+              <input id="spinner" name= "value" type= "number" placeholder= "Players" max= "5" min = "0">
+              </p1>
+            </div>
+          </span>
+        </div>
+      </div>  
+      <div class= "container">
         
         <table id= "highscoretable" class= "center">
           

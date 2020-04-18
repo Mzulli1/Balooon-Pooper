@@ -80,6 +80,12 @@ tr:nth-child(even) {
 }
 
 
+#pageTitle {
+  z-index: 1;
+  position: absolute;
+  
+  
+}
 
 
 #highscoretable {
@@ -88,12 +94,26 @@ tr:nth-child(even) {
   margin-top: 30px;
 }
 
+#myCanvas{
+  z-index: -1
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  right:0px;
+  
+}
 
 #help div span{
   
   
 }
 
+#titleText{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 #container {
   width: 100vw;

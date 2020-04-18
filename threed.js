@@ -1,12 +1,13 @@
 
-
+import * as THREE from './build/three.module.js';
+import { OBJLoader } from './OBJLoader.js';
 
 var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'), antialias: true});
 renderer.setClearColor(0x00ff00);
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-
+var objects = {};
 
 //CAMERA
 var camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 3000);
@@ -30,6 +31,35 @@ mesh.position.set(0, 0, -1000);
 
 scene.add(mesh);
 
+var loader = new OBJLoader();
+
+// load a resource
+loader.load(
+	// resource URL
+	'/balloon.obj',
+	// called when resource is loaded
+	function ( object ) {
+
+		scene.add( object );
+		object.position.set(0, 0, -1000);
+		objects.balloon = object;
+		
+
+	},
+	// called when loading is in progresses
+	function ( xhr ) {
+
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+	},
+	// called when loading has errors
+	function ( error ) {
+
+		console.log( 'An error happened' );
+
+	}
+);
+
 //Resize Logic
 function handleResize()
  {
@@ -50,10 +80,15 @@ function handleResize()
 requestAnimationFrame(render);
 
 window.addEventListener('resize', handleResize);
-
+let frame = 0;
 function render() {
-    mesh.rotation.x += 0.01;
-    mesh.rotation.y += 0.01;
+	if(objects.balloon){
+    objects.balloon.rotation.y += 0.01;
+
+    frame += 1;
+    objects.balloon.position.y = (frame*.25) +20*Math.sin(0.02*frame);
+    objects.balloon.scale.addScalar(.002);
+    }
     renderer.render(scene, camera);
     requestAnimationFrame(render);
 }

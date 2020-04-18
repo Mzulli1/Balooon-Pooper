@@ -63,7 +63,7 @@ tr:nth-child(even) {
   text-align: center;
 }
 .center {
-  margin: auto;
+  
   width: 70vmin;
   padding: 10px;
 }
@@ -108,11 +108,35 @@ tr:nth-child(even) {
   
 }
 
+#bigbody {
 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+
+}
 
 .container {
   width: 100vw;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.horizontal {
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.vertical {
+  height: 100%;
+  display:flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }

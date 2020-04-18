@@ -1,19 +1,5 @@
 
-function handleResize() {
-  let w = window.innerWidth;
-  let h = window.innerHeight;
 
-  camera2d.left   = -w / 2;
-  camera2d.right  =  w / 2;
-  camera2d.top    =  h / 2;
-  camera2d.bottom = -h / 2;
-  camera2d.updateProjectionMatrix();
-
-  camera3d.aspect = window.innerWidth / window.innerHeight;
-  camera3d.updateProjectionMatrix();
-
-  renderer.setSize(window.innerWidth, window.innerHeight);
-}
 
 var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'), antialias: true});
 renderer.setClearColor(0x00ff00);
@@ -44,10 +30,26 @@ mesh.position.set(0, 0, -1000);
 
 scene.add(mesh);
 
+//Resize Logic
+function handleResize()
+ {
+  let w = window.innerWidth;
+  let h = window.innerHeight;
+
+
+
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+
 
 //RENDER LOOP
 requestAnimationFrame(render);
 
+window.addEventListener('resize', handleResize);
 
 function render() {
     mesh.rotation.x += 0.01;
@@ -58,10 +60,4 @@ function render() {
 
 // Update the camera and renderer parameters when the window changes size
 
-function reportWindowSize() {
-  heightOutput.textContent = window.innerHeight;
-  widthOutput.textContent = window.innerWidth;
-}
-
-window.onresize = reportWindowSize;
 

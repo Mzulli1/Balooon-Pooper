@@ -3,75 +3,57 @@
   
   
   <head>
-
     <title> Mark's Project </title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-
     <link rel="stylesheet" href="/style.css" />
     <link rel= "stylesheet" href="/CoolButtons.css"/>
     <link rel="stylesheet" href= "http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet"> 
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
     <script src="/voice-commands.js" defer></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin="anonymous"></script>
-
     <script src="threed.js" defer></script>
-
     <script src="/script.js" defer></script>
     <script src ="/game.js" defer></script>
-    
-    
   </head>
-  
-   
-  
   <body>
+    <canvas id="myCanvas"></canvas>
+    <div id=bigbody>
 
-    
-      
-      <h1 id="pageTitle">
-        Ballooon Popper
-      </h1>
-    
-     
+      <div class= "horizontal">
+        <h1 id="pageTitle">
+          Ballooon Popper
+        </h1>
+      </div>  
+  
+      <div id= "startpage" class="vertical">
 
-      <canvas id="myCanvas"></canvas>
+        <div class="container">
 
-      <div id= "startpage">
-
-      <div class="container">
-
-        <div class="button" onclick= "(start)">
+          <div class="button" onclick= "(start)">
           <a id= "start" href="#">Start</a>
           <p class="top">Please Enable Mic</p>
           <p class="bottom">Click to Begin</p>
-        </div>
-          <span> 
-            <div>
+          </div>
+            <span> 
               <p1>
               <input id="spinner" name= "value" type= "number" placeholder= "Players" max= "5" min = "0">
               </p1>
-            </div>
           </span>
         </div>
-      </div>  
-      <div class= "container">
+      
+        <div class= "horizontal">
         
-        <table id= "highscoretable" class= "center">
+          <table id= "highscoretable" class= "center">
           
-          <tr>
-            <th>
-              High Scores
-            </th>
-          </tr>
+            <tr>
+              <th>
+                High Scores
+              </th>
+            </tr>
           
           <tr id="pos-first">
 

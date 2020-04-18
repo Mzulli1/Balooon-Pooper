@@ -83,7 +83,7 @@ tr:nth-child(even) {
 #pageTitle {
   z-index: 1;
   position: absolute;
-  
+
   
 }
 
@@ -108,14 +108,9 @@ tr:nth-child(even) {
   
 }
 
-#titleText{
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-#container {
+
+.container {
   width: 100vw;
   display: flex;
   align-items: center;
